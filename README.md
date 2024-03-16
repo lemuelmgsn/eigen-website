@@ -1,5 +1,8 @@
 > Deze deeltaak hoor bij de leertaak van _Server Side Rendering_. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
+# UML Diagram
+
+Schets een UML diagram van een server-side gerenderde website.
 
 
 ## Licentie
