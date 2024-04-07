@@ -1,0 +1,32 @@
+main{
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+}
+article{
+    background-color: rgb(75, 201, 201);
+    height: 200px;
+    scroll-snap-align: center;
+    width: auto;
+}
+article:nth-of-type(2n){
+    background-color: rgb(213, 113, 230);
+}
+article:nth-of-type(3n){
+    background-color: rgb(219, 225, 56);
+}
+section{
+    display: flex;
+    scroll-snap-type: x mandatory;
+    width: 80vw;
+    overflow: auto;
+    align-self: center;
+    margin: 5em;
+}
+blockquote{
+    width: 70vw;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+}
+
