@@ -3,9 +3,17 @@ main{
     justify-content: center;
     align-items: center;
 }
+header{
+    display: flexbox;
+    align-items: center;
+}
+nav ul{
+    display: flex;
+    gap: 2em;
+}
 article{
     background-color: rgb(75, 201, 201);
-    height: 200px;
+    height: 150px;
     scroll-snap-align: center;
     width: auto;
 }
@@ -21,12 +29,19 @@ section{
     width: 80vw;
     overflow: auto;
     align-self: center;
-    margin: 5em;
 }
 blockquote{
     width: 70vw;
     text-align: center;
     font-size: 3em;
     font-weight: bold;
+}
+.test{
+    display: flex;
+}
+button{
+    height: 3em;
+    width: 3em;
+    transform: translateY(125%);
 }
 
