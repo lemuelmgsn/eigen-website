@@ -1,7 +1,7 @@
 <section>
 
-    <article>
-        <blockquote>“Item 1”</blockquote>
+    <!-- <article>
+        <blockquote><%= data.type %></blockquote>
     </article>
 
     <article>
@@ -9,7 +9,7 @@
     </article>
 
     <article>
-        <blockquote>“JItem 3”</blockquote>
+        <blockquote>“Item 3”</blockquote>
     </article>
 
     <article>
@@ -22,6 +22,14 @@
 
     <article>
         <blockquote>“Item 6”</blockquote>
-    </article>
+    </article> -->
+
+    <% data.forEach(data => {%>
+
+        <article>
+            <h2><%= data.id %></h2>
+        </article>
+
+    <%}) %>
 
 </section>
