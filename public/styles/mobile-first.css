@@ -23,30 +23,33 @@ nav ul{
     justify-content: space-evenly;
     list-style-type: none;
 }
+nav ul li a{
+    text-decoration: none;
+    transform: 1s;
+    color: black;
+}
+nav ul li a:hover{
+    text-decoration: underline;
+}
 
 /* alle artikelen */
-article{
-    background-color: rgb(75, 201, 201);
-    /* height: 150px; */
+img{
+    /* background-color: rgb(75, 201, 201); */
+    height: 200px;
     scroll-snap-align: center;
-    width: auto;
+    min-width: 250px;
+    max-width: 400px;
 }
-article:nth-of-type(2n){
-    background-color: rgb(213, 113, 230);
-}
-article:nth-of-type(3n){
-    background-color: rgb(219, 225, 56);
-}
-
 .test{
     display: flex;
     flex-direction: row;
     overflow: scroll;
     overflow-y: hidden;
-    width: 400px;
+    overflow-x: hidden;
+    width: 300px;
 
     height: 200px;
-    background-color: lightblue;
+    /* background-color: lightyellow; */
 }
 section{
     display: flex;
@@ -58,7 +61,14 @@ section{
 button{
     height: 2em;
     width: 2em;
-    transform: translateY(125%);
+    /* transform: translateY(125%); */
+    transform: translateY(260%);
+    /* background-color: transparent; */
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    scale: 1.5;
 }
 article{
     background-color: blue;
@@ -73,5 +83,13 @@ article{
 }
 h2{
     background-color: purple;
-    width: 400px;
+    /* width: 400px; */
+    width: 100%;
+}
+.arrow-left{
+    transform: rotateY(180deg);
+}
+img{
+    height: 200px;
+    width: 200px;
 }

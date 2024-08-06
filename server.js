@@ -32,9 +32,9 @@ app.get('/', function(request, response) {
         });
 })
 
-app.get('/', function(request, response) {
+app.get('/summer', function(request, response) {
     fetchJson('https://fdnd-agency.directus.app/items/lemuel_kleding').then((apiData) => {
-        response.render('carrousel', {
+        response.render('summer', {
           data: apiData.data})
 	});
 })

@@ -26,10 +26,12 @@
 
     <% data.forEach(data => {%>
 
-        <article>
-            <h2><%= data.id %></h2>
-        </article>
+        <!-- <article> -->
+            <img src="https://fdnd-agency.directus.app/assets/<%= data.foto %>" alt="<%= data.type %> <%= data.id %>">
+        <!-- </article> -->
+
 
     <%}) %>
+
 
 </section>
