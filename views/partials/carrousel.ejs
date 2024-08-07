@@ -1,37 +1,19 @@
 <section>
 
-    <!-- <article>
-        <blockquote><%= data.type %></blockquote>
-    </article>
+    <ul class="carousel">
+        <% data.forEach(data => {%>
 
-    <article>
-        <blockquote>“Item 2”</blockquote>
-    </article>
-
-    <article>
-        <blockquote>“Item 3”</blockquote>
-    </article>
-
-    <article>
-        <blockquote>“Item 4”</blockquote>
-    </article>
-
-    <article>
-        <blockquote>“Item 5”</blockquote>
-    </article>
-
-    <article>
-        <blockquote>“Item 6”</blockquote>
-    </article> -->
-
-    <% data.forEach(data => {%>
-
-        <!-- <article> -->
-            <img src="https://fdnd-agency.directus.app/assets/<%= data.foto %>" alt="<%= data.type %> <%= data.id %>">
-        <!-- </article> -->
+                <!-- <article> -->
+                    <li><img src="https://fdnd-agency.directus.app/assets/<%= data.foto %>" alt="<%= data.type %> <%= data.id %>"></li>
+                <!-- </article> -->
 
 
-    <%}) %>
+            <%}) %>
+        
+      </ul>
+   
 
 
 </section>
+
+
