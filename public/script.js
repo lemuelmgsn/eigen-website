@@ -29,5 +29,40 @@ async function fetchAndRenderProducts() {
     }
 }
 
+
+
+// caroussel buttons test
+
 // Call the function to fetch and render products
 fetchAndRenderProducts();
+
+const carousel = document.querySelector('.carousel-2');
+const images = carousel.querySelectorAll('img');
+
+let currentIndex = 0;
+
+carousel.querySelector('.prev').addEventListener('click', () => {
+    currentIndex--;
+    if (currentIndex < 0) {
+      currentIndex = images.length - 1; 
+    } 
+    updateCarousel(); 
+  });
+  
+  carousel.querySelector('.next').addEventListener('click', () => { 
+  currentIndex++; 
+  if (currentIndex > images.length - 1) {
+   currentIndex = 0; 
+  } 
+    updateCarousel(); 
+  });
+
+  function updateCarousel() {
+    images.forEach((image, index) => {
+      if (index === currentIndex) {
+        image.style.display = 'block';
+      } else {
+        image.style.display = 'none';
+      }
+    });
+  }

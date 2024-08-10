@@ -21,20 +21,41 @@ app.listen(app.get('port'), function () {
 
 // VARIABELEN
 
-const apiUrl = 'https:fdnd-agency.directus.app/items/f_houses'
+const apiUrl = 'https://fdnd-agency.directus.app/items/lemuel_kleding'
 
 // ROUTES
 
 app.get('/', function(request, response) {
-        fetchJson('https://fdnd-agency.directus.app/items/lemuel_kleding').then((apiData) => {
+        fetchJson(apiUrl).then((apiData) => {
             response.render('homepage', {
               data: apiData.data})
         });
 })
 
-app.get('/summer', function(request, response) {
-    fetchJson('https://fdnd-agency.directus.app/items/lemuel_kleding').then((apiData) => {
-        response.render('summer', {
+app.get('/', function(request, response) {
+  fetchJson('https://fdnd-agency.directus.app/items/lemuel_kleding').then((apiData) => {
+      response.render('carousel', {
+        data: apiData.data})
+  });
+})
+
+app.get('/', function(request, response) {
+  fetchJson(apiUrl+'?filter[type][_eq]=shirts').then((apiData) => {
+      response.render('homepage', {
+        data: apiData.data})
+  });
+})
+
+app.get('/', function(request, response) {
+  fetchJson(apiUrl+'?filter[type][_eq]=broeken').then((apiData) => {
+      response.render('homepage', {
+        data: apiData.data})
+  });
+})
+
+app.get('/', function(request, response) {
+    fetchJson(apiUrl+'?filter[type][_eq]=schoenen').then((apiData) => {
+        response.render('homepage', {
           data: apiData.data})
 	});
 })

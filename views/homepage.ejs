@@ -35,7 +35,20 @@
             <button><%- include('./partials/right-arrow-svg') %></button> 
         </div>
 
-<!--  test  -->
+        <!-- test 2  -->
+
+        <div class="carousel-2">
+            <button class="prev">Prev</button>
+                <% data.forEach(data => {%>
+                        <!-- <article> -->
+                            <img src="https://fdnd-agency.directus.app/assets/<%= data.foto %>" alt="<%= data.type %> <%= data.id %>">
+                        <!-- </article> -->    
+                    <%}) %>
+            <button class="next">Next</button>
+        </div>
+
+   
+<!--  test 1  -->
 
      <div id="shirts" class="product-group">
             <!-- <h2>Shirts</h2> -->
