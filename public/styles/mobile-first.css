@@ -114,7 +114,7 @@ img{
     
     scroll-snap-align: start;
     
-    background: #ccc;
+    /* background: #ccc; */
     border-radius: 1rem;
 }
 

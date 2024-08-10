@@ -19,51 +19,71 @@
     
         <div class="test">
             <button><%- include('./partials/left-arrow-svg') %></button>
-                <%- include('./partials/carrousel') %>
+            
+                <section>
+                    <ul class="carousel">
+                        <% shirts.forEach(shirts => {%>
+                                    <li><img src="https://fdnd-agency.directus.app/assets/<%= shirts.foto %>" alt="<%= shirts.type %> <%= shirts.id %>"></li>
+                            <%}) %>
+                      </ul>
+                </section>
+
+            <button><%- include('./partials/right-arrow-svg') %></button>  
+        </div>
+
+        <div class="test">
+            <button><%- include('./partials/left-arrow-svg') %></button>
+
+                <section>
+                    <ul class="carousel">
+                        <% broeken.forEach(broeken => {%>
+                                    <li><img src="https://fdnd-agency.directus.app/assets/<%= broeken.foto %>" alt="<%= broeken.type %> <%= broeken.id %>"></li>
+                            <%}) %>
+                      </ul>
+                </section>
+                
             <button><%- include('./partials/right-arrow-svg') %></button> 
         </div>
 
         <div class="test">
             <button><%- include('./partials/left-arrow-svg') %></button>
-                <%- include('./partials/carrousel') %>
-            <button><%- include('./partials/right-arrow-svg') %></button> 
-        </div>
 
-        <div class="test">
-            <button><%- include('./partials/left-arrow-svg') %></button>
-                <%- include('./partials/carrousel') %>
+            <section>
+                <ul class="carousel">
+                    <% schoenen.forEach(schoenen => {%>
+                                <li><img src="https://fdnd-agency.directus.app/assets/<%= schoenen.foto %>" alt="<%= schoenen.type %> <%= schoenen.id %>"></li>
+                        <%}) %>
+                  </ul>
+            </section>
+
             <button><%- include('./partials/right-arrow-svg') %></button> 
         </div>
 
         <!-- test 2  -->
 
-        <div class="carousel-2">
+        <!-- <div class="carousel-2">
             <button class="prev">Prev</button>
-                <% data.forEach(data => {%>
-                        <!-- <article> -->
-                            <img src="https://fdnd-agency.directus.app/assets/<%= data.foto %>" alt="<%= data.type %> <%= data.id %>">
-                        <!-- </article> -->    
-                    <%}) %>
+               
             <button class="next">Next</button>
-        </div>
+        </div> -->
 
    
 <!--  test 1  -->
 
-     <div id="shirts" class="product-group">
-            <!-- <h2>Shirts</h2> -->
+     <!-- <div id="shirts" class="product-group">
+            <h2>Shirts</h2>
             <div class="product-list"></div>
     </div>
 
     <div id="broeken" class="product-group">
-            <!-- <h2>Broeken</h2> -->
+            <h2>Broeken</h2>
             <div class="product-list"></div>
     </div>
 
     <div id="schoenen" class="product-group">
-            <!-- <h2>Schoenen</h2> -->
+            <h2>Schoenen</h2>
             <div class="product-list"></div>
-    </div>
+    </div> -->
        
        
     </main>
