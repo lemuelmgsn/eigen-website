@@ -16,6 +16,9 @@
     </header>
 
     <main>
+
+        
+        <!-- carousel 1 -->
     
         <div class="test">
             <button><%- include('./partials/left-arrow-svg') %></button>
@@ -23,27 +26,31 @@
                 <section>
                     <ul class="carousel">
                         <% shirts.forEach(shirts => {%>
-                                    <li><img src="https://fdnd-agency.directus.app/assets/<%= shirts.foto %>" alt="<%= shirts.type %> <%= shirts.id %>"></li>
-                            <%}) %>
-                      </ul>
+                            <li><img src="https://fdnd-agency.directus.app/assets/<%= shirts.foto %>" alt="<%= shirts.type %> <%= shirts.id %>"></li>
+                        <%}) %>
+                    </ul>
                 </section>
 
             <button><%- include('./partials/right-arrow-svg') %></button>  
         </div>
 
+        <!-- carousel 2 -->
+        
         <div class="test">
             <button><%- include('./partials/left-arrow-svg') %></button>
 
                 <section>
                     <ul class="carousel">
                         <% broeken.forEach(broeken => {%>
-                                    <li><img src="https://fdnd-agency.directus.app/assets/<%= broeken.foto %>" alt="<%= broeken.type %> <%= broeken.id %>"></li>
-                            <%}) %>
-                      </ul>
+                            <li><img src="https://fdnd-agency.directus.app/assets/<%= broeken.foto %>" alt="<%= broeken.type %> <%= broeken.id %>"></li>
+                        <%}) %>
+                    </ul>
                 </section>
                 
             <button><%- include('./partials/right-arrow-svg') %></button> 
         </div>
+
+        <!-- carousel 3 -->
 
         <div class="test">
             <button><%- include('./partials/left-arrow-svg') %></button>
@@ -51,13 +58,26 @@
             <section>
                 <ul class="carousel">
                     <% schoenen.forEach(schoenen => {%>
-                                <li><img src="https://fdnd-agency.directus.app/assets/<%= schoenen.foto %>" alt="<%= schoenen.type %> <%= schoenen.id %>"></li>
-                        <%}) %>
-                  </ul>
+                        <li><img src="https://fdnd-agency.directus.app/assets/<%= schoenen.foto %>" alt="<%= schoenen.type %> <%= schoenen.id %>" class="schoen-img"></li>
+                    <%}) %>
+                </ul>
             </section>
 
             <button><%- include('./partials/right-arrow-svg') %></button> 
         </div>
+
+
+        
+
+        
+        <form>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+            <label for="vehicle1"> I have a bike</label><br>
+            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+            <label for="vehicle2"> I have a car</label><br>
+            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+            <label for="vehicle3"> I have a boat</label>
+          </form>
 
         <!-- test 2  -->
 
@@ -70,9 +90,13 @@
    
 <!--  test 1  -->
 
-     <!-- <div id="shirts" class="product-group">
-            <h2>Shirts</h2>
-            <div class="product-list"></div>
+<!-- <section class="intro">
+    <h2>Welcome!</h2>
+    <p>Welkom bij Luh Calm Fit.</p>
+
+    <div id="shirts" class="product-group">
+        <h2>Shirts</h2>
+        <div class="product-list"></div>
     </div>
 
     <div id="broeken" class="product-group">
@@ -83,7 +107,9 @@
     <div id="schoenen" class="product-group">
             <h2>Schoenen</h2>
             <div class="product-list"></div>
-    </div> -->
+    </div>
+
+</section> -->
        
        
     </main>
