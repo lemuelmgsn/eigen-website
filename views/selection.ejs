@@ -1,0 +1,46 @@
+<%- include('./partials/head') %>
+
+<body>
+
+    <header>
+        <h1>Luh calm fit</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/summer">Summer</a></li>
+                <li><a href="/winter">Winter</a></li>
+                <li><a href="/fall">Fall</a></li>
+                <li><a href="/spring">Spring</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Your Saved Outfits</h2>
+        <section class="outfits-saved">
+            
+            <% outfits.forEach((outfit, index) => { %>
+            <div class="outfit-div">
+                <h3>Outfit <%= index + 1 %></h3>
+                <div>
+                    <!-- <h3>Shirt</h3> -->
+                    <img src="https://fdnd-agency.directus.app/assets/<%= outfit.shirt.foto %>" alt="<%= outfit.shirt.type %>">
+                </div>
+                <div>
+                    <!-- <h3>Broek</h3> -->
+                    <img src="https://fdnd-agency.directus.app/assets/<%= outfit.broek.foto %>" alt="<%= outfit.broek.type %>">
+                </div>
+                <div>
+                    <!-- <h3>Schoen</h3> -->
+                    <img src="https://fdnd-agency.directus.app/assets/<%= outfit.schoen.foto %>" alt="<%= outfit.schoen.type %>">
+                </div>
+            </div>
+            <!-- <hr> -->
+        <% }) %>
+        </section>
+
+    </main>
+
+    <script src="/script.js"></script>
+</body>
+</html>

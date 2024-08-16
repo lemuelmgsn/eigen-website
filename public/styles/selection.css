@@ -1,0 +1,22 @@
+.outfits-saved{
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    /* background-color: red; */
+    width: 600px;
+}
+.outfit-div{
+    margin: 3em;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* padding: 2rem; */
+    /* padding: 1rem 0; */
+    /* margin-right: .5rem; */
+    
+    flex: 1 1 1 auto;
+    /* justify-content: space-around; */
+    align-items: center;
+    
+    scroll-snap-align: start;
+}

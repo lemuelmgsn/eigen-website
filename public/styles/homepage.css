@@ -50,9 +50,9 @@ nav ul li a:hover{
     max-width: 600px;
     align-items: center;
     justify-content: center;
-    
     /* width: 100%; */
-    height: 200px;
+    /* height: 180px; */
+    max-height: 270px;
     overflow-x: hidden;
 }
 section{
@@ -80,10 +80,11 @@ button {
 button:hover{
     scale: 1.5;
 }
-h2{
-    /* background-color: black; */
-    /* width: 400px; */
-    width: 100%;
+.save-button{
+    margin-right: auto;
+    width: 2em;
+    height: 2em;
+    border: 1px solid black;
 }
 .arrow-left{
     transform: rotateY(180deg);
@@ -95,10 +96,9 @@ img{
     
     object-fit: contain; 
 }
-.schoen-img{
-    height: auto;
+.broek-img{
+    max-height: 250px;
 }
-
 .carousel {
     margin: 0;
     padding: 0;
@@ -132,69 +132,7 @@ img{
 .carousel li:hover{
     overflow-x: hidden;
 }
-  /* test */
-.product-group {
-    background-color: transparent;
-    /* scale: 0.5; */
-}
-.product-item {
-    display: inline-block;
-    /* scale: 0.5; */
-}
-.product-item img {
-    object-fit: cover;
-    max-width: 200px;
-    height: auto;
-}
-.product-list{
-    max-height: 200px;
-}
-.test-2{
-    display: flex;
-    flex-direction: column;
-    
-}
-
-/* test 2 */
-.carousel-2 {
-    position: relative;
-    width: 500px;
-    height: 300px;
-  }
-  .carousel-2 img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .carousel-2 button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 32px;
-    cursor: pointer;
-  }
-  
-  .carousel-2 .prev {
-    color: black;
-    left: 20px;
-  }
-  .carousel-2 .next {
-    color: black;
-    right: 20px;
-  }
-  /* intro styling */
-  .intro{
-    /* height: 100vh; */
-    display: flex;
-    flex-direction: column;
-  }
-
-
+ 
   @media (max-width: 768px) {
     .test {
         max-width: 100%;
