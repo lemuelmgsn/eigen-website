@@ -39,6 +39,20 @@
         <% }) %>
         </section>
 
+        <script>
+
+            const jsConfetti = new JSConfetti();
+    
+                window.onload = function() {
+    
+                jsConfetti.addConfetti({
+                    emojis: ['🏠', '⭐️', '✨', '🌟', '💫'],
+                    emojiSize: 80,
+                    confettiNumber: 40,
+                });
+            };
+        </script>
+
     </main>
 
     <script src="/script.js"></script>

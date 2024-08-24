@@ -1,7 +1,6 @@
 <%- include('./partials/head') %>
 
 <body>
-
     <header>
         <h1>Luh calm fit</h1>
         <nav>
@@ -18,12 +17,12 @@
     <main>
         <!-- Formulier voor het selecteren van een kledingstuk uit elke categorie -->
         <form action="/save-selection" method="POST">
-
-            <!-- carousel 1: Shirts -->
-            <div class="test">
-                <button type="button"><%- include('./partials/left-arrow-svg') %></button>
+                
+            <!-- carousel 1: shirts -->
+            <div class="carousel-container">
+                <button type="button" class="carousel-button left" data-target="#carouselShirts"><%- include('./partials/left-arrow-svg') %></button>
                     <section>
-                        <ul class="carousel">
+                        <ul id="carouselShirts" class="carousel">
                             <% shirts.forEach(shirt => { %>
                                 <li>
                                     <label>
@@ -34,14 +33,14 @@
                             <% }) %>
                         </ul>
                     </section>
-                <button type="button"><%- include('./partials/right-arrow-svg') %></button>  
+                <button type="button" class="carousel-button right" data-target="#carouselShirts"><%- include('./partials/right-arrow-svg') %></button>  
             </div>
 
-            <!-- carousel 2: Broeken -->
-            <div class="test">
-                <button type="button"><%- include('./partials/left-arrow-svg') %></button>
+            <!-- carousel 2: broeken -->
+            <div class="carousel-container">
+                <button type="button" class="carousel-button left" data-target="#carouselBroeken"><%- include('./partials/left-arrow-svg') %></button>
                     <section>
-                        <ul class="carousel">
+                        <ul id="carouselBroeken" class="carousel">
                             <% broeken.forEach(broek => { %>
                                 <li>
                                     <label>
@@ -52,32 +51,33 @@
                             <% }) %>
                         </ul>
                     </section>
-                <button type="button"><%- include('./partials/right-arrow-svg') %></button> 
+                <button type="button" class="carousel-button right" data-target="#carouselBroeken"><%- include('./partials/right-arrow-svg') %></button> 
             </div>
 
-            <!-- carousel 3: Schoenen -->
-            <div class="test">
-                <button type="button"><%- include('./partials/left-arrow-svg') %></button>
-                    <section>
-                        <ul class="carousel">
-                            <% schoenen.forEach(schoen => { %>
-                                <li>
-                                    <label>
-                                        <input type="radio" name="selectedSchoen" value="<%= schoen.id %>" required>
-                                        <img src="https://fdnd-agency.directus.app/assets/<%= schoen.foto %>" alt="<%= schoen.type %> <%= schoen.id %>">
-                                    </label>
-                                </li>
-                            <% }) %>
-                        </ul>
-                    </section>
-                <button type="button"><%- include('./partials/right-arrow-svg') %></button> 
+            <!-- carousel 3: schoenen -->
+            <div class="carousel-container">
+                <button type="button" class="carousel-button left" data-target="#carouselSchoenen"><%- include('./partials/left-arrow-svg') %></button>
+                <section>
+                    <ul id="carouselSchoenen" class="carousel">
+                        <% schoenen.forEach(schoen => { %>
+                            <li>
+                                <label>
+                                    <input type="radio" name="selectedSchoen" value="<%= schoen.id %>" required>
+                                    <img src="https://fdnd-agency.directus.app/assets/<%= schoen.foto %>" alt="<%= schoen.type %> <%= schoen.id %>">
+                                </label>
+                            </li>
+                        <% }) %>
+                    </ul>
+                </section>
+                <button type="button" class="carousel-button right" data-target="#carouselSchoenen"><%- include('./partials/right-arrow-svg') %></button> 
             </div>
 
-            <!-- Save-knop -->
+            <!-- save outfit knop -->
             <button type="submit" class="save-button">Save Outfit!</button>
+
         </form>
     </main>
 
-    <script src="/script.js"></script>
+    <script src="/script.js" defer></script>
 </body>
 </html>
