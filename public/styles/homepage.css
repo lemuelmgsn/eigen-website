@@ -193,7 +193,7 @@ h4{
     /* border: 1px solid red; */
     margin-top: 50px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 .skiplink{
     font-size: 20px;

@@ -6,7 +6,7 @@
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/save-selection">Saved Outfits</a></li>
+                <li><a href="/summer">Summer</a></li>
                 <li><a href="/winter">Winter</a></li>
                 <li><a href="/fall">Fall</a></li>
                 <li><a href="/spring">Spring</a></li>
@@ -15,61 +15,94 @@
     </header>
 
     <main>
+
+        <section class="intro-pagina">
+            <div class="intro-div">
+                <h2>Welcome to Luh calm fit!</h2>
+                    <p>
+                        On our website, you can easily put together your perfect outfit. With our handy outfit maker, you can browse through various clothing items and 
+                        create your own unique style.
+                    </p>
+                <br>
+                <h3>How does it work?</h3>
+                    <p>
+                        It's simple! Use the carousel to browse through our selection of clothing. You'll find different categories like shirts, pants, shoes, and accessories. 
+                        Click the buttons to view the items and select your favorites by clicking on it. Once you're happy with your selection, you can save the outfit. 
+                        This way, you'll always have your favorite combinations at hand, anytime and anywhere.
+                    </p>
+                <br>
+                <a href="#startnow" class="skiplink">Start creating your outfit!</a>
+            </div>
+        </section>
+
+        <h4 id="startnow">Outfit Picker!</h4>
         <!-- Formulier voor het selecteren van een kledingstuk uit elke categorie -->
         <form action="/save-selection" method="POST">
-                
+
             <!-- carousel 1: shirts -->
             <div class="carousel-container">
-                <button type="button" class="carousel-button left" data-target="#carouselShirts"><%- include('./partials/left-arrow-svg') %></button>
+                <button type="button" class="carousel-button left" data-target="#carouselShirts" aria-label="left-button"><%- include('./partials/left-arrow-svg') %></button>
                     <section>
                         <ul id="carouselShirts" class="carousel">
                             <% shirts.forEach(shirt => { %>
                                 <li>
                                     <label>
                                         <input type="radio" name="selectedShirt" value="<%= shirt.id %>" required>
-                                        <img src="https://fdnd-agency.directus.app/assets/<%= shirt.foto %>" alt="<%= shirt.type %> <%= shirt.id %>">
+                                            <picture>
+                                                <source srcset="https://fdnd-agency.directus.app/assets/<%= shirt.foto %>?format=avif" type="image/avif">
+                                                <source srcset="https://fdnd-agency.directus.app/assets/<%= shirt.foto %>?format=webp" type="image/webp">
+                                                <img src="https://fdnd-agency.directus.app/assets/<%= shirt.foto %> %>" alt="<%= shirt.type %> <%= shirt.id %>" loading="lazy" width= auto height= auto>
+                                            </picture>
                                     </label>
                                 </li>
                             <% }) %>
                         </ul>
                     </section>
-                <button type="button" class="carousel-button right" data-target="#carouselShirts"><%- include('./partials/right-arrow-svg') %></button>  
+                <button type="button" class="carousel-button right" data-target="#carouselShirts" aria-label="right-button"><%- include('./partials/right-arrow-svg') %></button>  
             </div>
 
             <!-- carousel 2: broeken -->
             <div class="carousel-container">
-                <button type="button" class="carousel-button left" data-target="#carouselBroeken"><%- include('./partials/left-arrow-svg') %></button>
+                <button type="button" class="carousel-button left" data-target="#carouselBroeken" aria-label="left-button"><%- include('./partials/left-arrow-svg') %></button>
                     <section>
                         <ul id="carouselBroeken" class="carousel">
                             <% broeken.forEach(broek => { %>
                                 <li>
                                     <label>
                                         <input type="radio" name="selectedBroek" value="<%= broek.id %>" required>
-                                        <img src="https://fdnd-agency.directus.app/assets/<%= broek.foto %>" alt="<%= broek.type %> <%= broek.id %>" class="broek-img">
+                                            <picture>
+                                                <source srcset="https://fdnd-agency.directus.app/assets/<%= broek.foto %>?format=avif" type="image/avif">
+                                                <source srcset="https://fdnd-agency.directus.app/assets/<%= broek.foto %>?format=webp" type="image/webp">
+                                                <img src="https://fdnd-agency.directus.app/assets/<%= broek.foto %> %>" alt="<%= broek.type %> <%= broek.id %>" loading="lazy" width= auto height= auto class="broek-img">
+                                            </picture>
                                     </label>
                                 </li>
                             <% }) %>
                         </ul>
                     </section>
-                <button type="button" class="carousel-button right" data-target="#carouselBroeken"><%- include('./partials/right-arrow-svg') %></button> 
+                <button type="button" class="carousel-button right" data-target="#carouselBroeken" aria-label="right-button"><%- include('./partials/right-arrow-svg') %></button> 
             </div>
 
             <!-- carousel 3: schoenen -->
             <div class="carousel-container">
-                <button type="button" class="carousel-button left" data-target="#carouselSchoenen"><%- include('./partials/left-arrow-svg') %></button>
+                <button type="button" class="carousel-button left" data-target="#carouselSchoenen" aria-label="left-button"><%- include('./partials/left-arrow-svg') %></button>
                 <section>
                     <ul id="carouselSchoenen" class="carousel">
                         <% schoenen.forEach(schoen => { %>
                             <li>
                                 <label>
                                     <input type="radio" name="selectedSchoen" value="<%= schoen.id %>" required>
-                                    <img src="https://fdnd-agency.directus.app/assets/<%= schoen.foto %>" alt="<%= schoen.type %> <%= schoen.id %>">
+                                        <picture>
+                                            <source srcset="https://fdnd-agency.directus.app/assets/<%= schoen.foto %>?format=avif" type="image/avif">
+                                            <source srcset="https://fdnd-agency.directus.app/assets/<%= schoen.foto %>?format=webp" type="image/webp">
+                                            <img src="https://fdnd-agency.directus.app/assets/<%= schoen.foto %> %>" alt="<%= schoen.type %> <%= schoen.id %>" loading="lazy" width= auto height= auto>
+                                        </picture>
                                 </label>
                             </li>
                         <% }) %>
                     </ul>
                 </section>
-                <button type="button" class="carousel-button right" data-target="#carouselSchoenen"><%- include('./partials/right-arrow-svg') %></button> 
+                <button type="button" class="carousel-button right" data-target="#carouselSchoenen" aria-label="right-button"><%- include('./partials/right-arrow-svg') %></button> 
             </div>
 
             <!-- save outfit knop -->
@@ -79,5 +112,6 @@
     </main>
 
     <script src="/script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
 </body>
 </html>

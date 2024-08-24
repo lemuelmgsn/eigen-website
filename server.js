@@ -27,7 +27,7 @@ app.get('/', function(request, response) {
       fetchJson(apiUrl + '?filter[type][_eq]=broeken'),
       fetchJson(apiUrl + '?filter[type][_eq]=schoenen')
   ]).then(([shirts, broeken, schoenen]) => {
-      response.render('homepage2', {
+      response.render('homepage', {
           shirts: shirts.data,
           broeken: broeken.data,
           schoenen: schoenen.data

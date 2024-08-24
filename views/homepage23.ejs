@@ -49,7 +49,7 @@
 
             <!-- carousel 1: shirts -->
             <div class="carousel-container">
-                <button type="button" class="carousel-button left" data-target="#carouselShirts"><%- include('./partials/left-arrow-svg') %></button>
+                <button type="button" class="carousel-button left" data-target="#carouselShirts" aria-label="left-button"><%- include('./partials/left-arrow-svg') %></button>
                     <section>
                         <ul id="carouselShirts" class="carousel">
                             <% shirts.forEach(shirt => { %>
@@ -66,12 +66,12 @@
                             <% }) %>
                         </ul>
                     </section>
-                <button type="button" class="carousel-button right" data-target="#carouselShirts"><%- include('./partials/right-arrow-svg') %></button>  
+                <button type="button" class="carousel-button right" data-target="#carouselShirts" aria-label="right-button"><%- include('./partials/right-arrow-svg') %></button>  
             </div>
 
             <!-- carousel 2: broeken -->
             <div class="carousel-container">
-                <button type="button" class="carousel-button left" data-target="#carouselBroeken"><%- include('./partials/left-arrow-svg') %></button>
+                <button type="button" class="carousel-button left" data-target="#carouselBroeken" aria-label="left-button"><%- include('./partials/left-arrow-svg') %></button>
                     <section>
                         <ul id="carouselBroeken" class="carousel">
                             <% broeken.forEach(broek => { %>
@@ -88,12 +88,12 @@
                             <% }) %>
                         </ul>
                     </section>
-                <button type="button" class="carousel-button right" data-target="#carouselBroeken"><%- include('./partials/right-arrow-svg') %></button> 
+                <button type="button" class="carousel-button right" data-target="#carouselBroeken" aria-label="right-button"><%- include('./partials/right-arrow-svg') %></button> 
             </div>
 
             <!-- carousel 3: schoenen -->
             <div class="carousel-container">
-                <button type="button" class="carousel-button left" data-target="#carouselSchoenen"><%- include('./partials/left-arrow-svg') %></button>
+                <button type="button" class="carousel-button left" data-target="#carouselSchoenen" aria-label="left-button"><%- include('./partials/left-arrow-svg') %></button>
                 <section>
                     <ul id="carouselSchoenen" class="carousel">
                         <% schoenen.forEach(schoen => { %>
@@ -110,7 +110,7 @@
                         <% }) %>
                     </ul>
                 </section>
-                <button type="button" class="carousel-button right" data-target="#carouselSchoenen"><%- include('./partials/right-arrow-svg') %></button> 
+                <button type="button" class="carousel-button right" data-target="#carouselSchoenen" aria-label="right-button"><%- include('./partials/right-arrow-svg') %></button> 
             </div>
 
             <!-- save outfit knop -->

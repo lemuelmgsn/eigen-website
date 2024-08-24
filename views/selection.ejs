@@ -16,7 +16,9 @@
     </header>
 
     <main>
-        <h2>Your Saved Outfits</h2>
+        <h2 class="saved">Your oufit has been succesfully saved!</h2>
+        <br>
+        <h3>Your saved outfits:</h3>
         <section class="outfits-saved">
             
             <% outfits.forEach((outfit, index) => { %>
@@ -40,21 +42,21 @@
         </section>
 
         <script>
-
+            document.addEventListener('DOMContentLoaded', function() {
             const jsConfetti = new JSConfetti();
     
-                window.onload = function() {
-    
                 jsConfetti.addConfetti({
-                    emojis: ['🏠', '⭐️', '✨', '🌟', '💫'],
+                    emojis: ['⭐️', '✨', '🌟', '💫'],
                     emojiSize: 80,
                     confettiNumber: 40,
                 });
-            };
+            });
         </script>
 
     </main>
 
     <script src="/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js" defer></script>
+
 </body>
 </html>
