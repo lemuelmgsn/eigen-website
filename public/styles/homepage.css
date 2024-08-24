@@ -62,7 +62,9 @@ section{
     overflow: auto;
     align-self: center;
 }
-button{
+
+/* testestetst */
+.carousel-button right, .carousel-button left {
     /* height: 2em; */
     /* width: 2em; */
     transition: .3s;
@@ -73,16 +75,25 @@ button{
     cursor: pointer;
     background-color: transparent;
 }
-button {
+.carousel-button right, .carousel-button left {
     height: 100%; /* Zorgt ervoor dat de knoppen dezelfde hoogte hebben als de div */
     width: auto;
 }
-button:hover{
+.carousel-button right:hover, .carousel-button left:hover {
     scale: 1.5;
 }
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
 .save-button{
-    margin-right: auto;
-    width: 2em;
+    margin-left: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 5px;
     height: 2em;
     border: 1px solid black;
 }

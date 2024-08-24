@@ -7,7 +7,7 @@
         <nav>
             <ul>
                 <li><a href="/">Home</a></li>
-                <li><a href="/summer">Summer</a></li>
+                <li><a href="/save-selection">Saved Outfits</a></li>
                 <li><a href="/winter">Winter</a></li>
                 <li><a href="/fall">Fall</a></li>
                 <li><a href="/spring">Spring</a></li>
@@ -16,102 +16,66 @@
     </header>
 
     <main>
+        <!-- Formulier voor het selecteren van een kledingstuk uit elke categorie -->
+        <form action="/save-selection" method="POST">
 
-        
-        <!-- carousel 1 -->
-    
-        <div class="test">
-            <button><%- include('./partials/left-arrow-svg') %></button>
-            
-                <section>
-                    <ul class="carousel">
-                        <% shirts.forEach(shirts => {%>
-                            <li><img src="https://fdnd-agency.directus.app/assets/<%= shirts.foto %>" alt="<%= shirts.type %> <%= shirts.id %>"></li>
-                        <%}) %>
-                    </ul>
-                </section>
+            <!-- carousel 1: Shirts -->
+            <div class="test">
+                <button type="button"><%- include('./partials/left-arrow-svg') %></button>
+                    <section>
+                        <ul class="carousel">
+                            <% shirts.forEach(shirt => { %>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="selectedShirt" value="<%= shirt.id %>" required>
+                                        <img src="https://fdnd-agency.directus.app/assets/<%= shirt.foto %>" alt="<%= shirt.type %> <%= shirt.id %>">
+                                    </label>
+                                </li>
+                            <% }) %>
+                        </ul>
+                    </section>
+                <button type="button"><%- include('./partials/right-arrow-svg') %></button>  
+            </div>
 
-            <button><%- include('./partials/right-arrow-svg') %></button>  
-        </div>
+            <!-- carousel 2: Broeken -->
+            <div class="test">
+                <button type="button"><%- include('./partials/left-arrow-svg') %></button>
+                    <section>
+                        <ul class="carousel">
+                            <% broeken.forEach(broek => { %>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="selectedBroek" value="<%= broek.id %>" required>
+                                        <img src="https://fdnd-agency.directus.app/assets/<%= broek.foto %>" alt="<%= broek.type %> <%= broek.id %>" class="broek-img">
+                                    </label>
+                                </li>
+                            <% }) %>
+                        </ul>
+                    </section>
+                <button type="button"><%- include('./partials/right-arrow-svg') %></button> 
+            </div>
 
-        <!-- carousel 2 -->
-        
-        <div class="test">
-            <button><%- include('./partials/left-arrow-svg') %></button>
+            <!-- carousel 3: Schoenen -->
+            <div class="test">
+                <button type="button"><%- include('./partials/left-arrow-svg') %></button>
+                    <section>
+                        <ul class="carousel">
+                            <% schoenen.forEach(schoen => { %>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="selectedSchoen" value="<%= schoen.id %>" required>
+                                        <img src="https://fdnd-agency.directus.app/assets/<%= schoen.foto %>" alt="<%= schoen.type %> <%= schoen.id %>">
+                                    </label>
+                                </li>
+                            <% }) %>
+                        </ul>
+                    </section>
+                <button type="button"><%- include('./partials/right-arrow-svg') %></button> 
+            </div>
 
-                <section>
-                    <ul class="carousel">
-                        <% broeken.forEach(broeken => {%>
-                            <li><img src="https://fdnd-agency.directus.app/assets/<%= broeken.foto %>" alt="<%= broeken.type %> <%= broeken.id %>" class="broek-img"></li>
-                        <%}) %>
-                    </ul>
-                </section>
-                
-            <button><%- include('./partials/right-arrow-svg') %></button> 
-        </div>
-
-        <!-- carousel 3 -->
-
-        <div class="test">
-            <button><%- include('./partials/left-arrow-svg') %></button>
-
-            <section>
-                <ul class="carousel">
-                    <% schoenen.forEach(schoenen => {%>
-                        <li><img src="https://fdnd-agency.directus.app/assets/<%= schoenen.foto %>" alt="<%= schoenen.type %> <%= schoenen.id %>" class="schoen-img"></li>
-                    <%}) %>
-                </ul>
-            </section>
-
-            <button><%- include('./partials/right-arrow-svg') %></button> 
-        </div>
-
-
-        
-
-        
-        <form>
-            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-            <label for="vehicle1"> I have a bike</label><br>
-            <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-            <label for="vehicle2"> I have a car</label><br>
-            <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-            <label for="vehicle3"> I have a boat</label>
-          </form>
-
-        <!-- test 2  -->
-
-        <!-- <div class="carousel-2">
-            <button class="prev">Prev</button>
-               
-            <button class="next">Next</button>
-        </div> -->
-
-   
-<!--  test 1  -->
-
-<!-- <section class="intro">
-    <h2>Welcome!</h2>
-    <p>Welkom bij Luh Calm Fit.</p>
-
-    <div id="shirts" class="product-group">
-        <h2>Shirts</h2>
-        <div class="product-list"></div>
-    </div>
-
-    <div id="broeken" class="product-group">
-            <h2>Broeken</h2>
-            <div class="product-list"></div>
-    </div>
-
-    <div id="schoenen" class="product-group">
-            <h2>Schoenen</h2>
-            <div class="product-list"></div>
-    </div>
-
-</section> -->
-       
-       
+            <!-- Save-knop -->
+            <button type="submit" class="save-button">Save Outfit!</button>
+        </form>
     </main>
 
     <script src="/script.js"></script>
