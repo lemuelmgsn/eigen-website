@@ -41,7 +41,7 @@ nav ul li a:hover{
 
 /* alle artikelen */
 
-.test{
+.carousel-container{
     display: flex;
     flex-direction: row;
     overflow-x: auto;
@@ -64,7 +64,7 @@ section{
 }
 
 /* testestetst */
-.carousel-button right, .carousel-button left {
+button {
     /* height: 2em; */
     /* width: 2em; */
     transition: .3s;
@@ -75,11 +75,11 @@ section{
     cursor: pointer;
     background-color: transparent;
 }
-.carousel-button right, .carousel-button left {
+button{
     height: 100%; /* Zorgt ervoor dat de knoppen dezelfde hoogte hebben als de div */
     width: auto;
 }
-.carousel-button right:hover, .carousel-button left:hover {
+button:hover {
     scale: 1.5;
 }
 form{
