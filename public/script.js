@@ -17,16 +17,14 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-
+// codepen van Sanne GSAP 
 let tlVanLeftNaarScale = gsap.timeline();
 
-// Animatie toepassen op de gehele intro-div
 tlVanLeftNaarScale.from('.intro-div', {
     duration: 1,
     y: -300
 });
 
-// Schaal de gehele intro-div in 1 seconde naar 1.5
 tlVanLeftNaarScale.to('.intro-div', {
     duration: 1,
     scale: 1
